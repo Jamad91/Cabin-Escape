@@ -49,7 +49,6 @@
      <Compile Include="Assets\Scripts\AddItem.cs" />
      <Compile Include="Assets\Scripts\GameControl.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
-     <Compile Include="Assets\Scripts\InventoryEditor.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
  <Reference Include="UnityEngine.Analytics">
