@@ -22,15 +22,15 @@ public class Inventory : MonoBehaviour {
 		}	
 	}
 
-	public void RemoveItem (GameObject itemToRemove) {
+	public void RemoveItem (Image itemToRemove) {
 		Debug.Log("removal");
 		Debug.Log(itemToRemove.GetComponent<Image>().sprite);
-		for (int i = 0; i < items.Length; i++) {
-			if (items [i] == itemToRemove) {
-				items[i] = null;
-				return;
-			}
-		}	
+//		for (int i = 0; i < items.Length; i++) {
+//			if (items [i] == itemToRemove) {
+//				items[i] = null;
+//				return;
+//			}
+//		}	
 	}
 
 }
