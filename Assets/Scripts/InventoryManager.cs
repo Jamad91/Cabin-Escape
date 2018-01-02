@@ -6,10 +6,9 @@ using UnityEngine.EventSystems;
 
 public class InventoryManager : MonoBehaviour {
 
-	private Inventory inventory;
+	private static Inventory inventory;
 	public static Image selectedSlot;
 	public Image itemSlot;
-	public Image blank;
 
 	public void SelectItem (Image itemImage)
 	{
@@ -39,7 +38,24 @@ public class InventoryManager : MonoBehaviour {
 		return selectedSlot;
 	}
 
-	public void RemoveItem () {
-		Debug.Log("Selected: " );
+	public void clearSelectedSlot ()
+	{
+		selectedSlot = null;
 	}
+
+//	public void RemoveItem (Image itemToRemove) {
+//		Debug.Log("removal of "+  itemToRemove.sprite);
+//		for (int i = 0; i < items.Length; i++) {
+////			itemImage = items [i].transform.GetChild (0).GetComponent<Image> ();
+////
+////			if (itemImage == itemToRemove) {
+////				Debug.Log("time to remove");
+//////				Destroy(itemToRemove);
+////				itemImage = null;
+//////				items[i] = null;
+////				return;
+////			}
+//		}
+////		Debug.Log(items[0]);	
+//	}
 }

@@ -9,13 +9,13 @@ public class Inventory : MonoBehaviour {
 	public GameObject[] items = new GameObject[numItemSlots];
 	private Image itemImage;
 	private Sprite selectedItem;
+	public InventoryManager inventoryManager;
+
 
 	public void AddItem (GameObject itemToAdd)
 	{
-//		Debug.Log(itemToAdd.GetComponent<SpriteRenderer>().sprite);
 		for (int i = 0; i < items.Length; i++) {
-			itemImage = items[i].transform.GetChild(0).GetComponent<Image>();
-			Debug.Log("itemImage: "+itemImage);
+			itemImage = items [i].transform.GetChild (0).GetComponent<Image> ();
 			if (itemImage == null || itemImage.sprite == null) {
 				itemImage.sprite = itemToAdd.GetComponent<SpriteRenderer>().sprite;
 				Destroy(itemToAdd);
@@ -26,20 +26,17 @@ public class Inventory : MonoBehaviour {
 
 	public void RemoveItem (Image itemToRemove)
 	{
-//		Debug.Log("removal");
-		Debug.Log (itemToRemove.GetComponent<Image> ().sprite);
-		 
 		for (int i = 0; i < items.Length; i++) {
 			itemImage = items [i].transform.GetChild (0).GetComponent<Image> ();
-
 			if (itemImage == itemToRemove) {
-				Debug.Log("time to remove");
-				Destroy(itemImage);
-//				itemImage = null;
-//				items[i] = null;
+				itemToRemove.transform.localScale -= new Vector3 (0.1F, 0.1F, 0);
+				itemImage.sprite = null;
+				inventoryManager.clearSelectedSlot();
+
+//				itemImage.transform.localScale -= new Vector3 (0.1F, 0.1F, 0);
+				return;
 			}
 		}
-		Debug.Log(items[0]);	
 	}
 
 }
