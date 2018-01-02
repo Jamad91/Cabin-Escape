@@ -17,13 +17,13 @@ public class Interactable : MonoBehaviour {
 		inventory = GameObject.Find ("Inventory").GetComponent<Inventory> ();
 		inventoryManager = GameObject.Find ("InventoryManager").GetComponent<InventoryManager> ();
 		selectedItem = inventoryManager.revealSelctedSlot ();
-		Debug.Log (selectedItem.sprite);
+//		Debug.Log (selectedItem.sprite);
 
 		if (selectedItem != null && selectedItem.sprite != null) {
 //			Debug.Log ("interactable selected: " + selectedItem.sprite);
 			if (selectedItem.sprite == interactsWith) {
-				Debug.Log("match!");
-				Debug.Log(selectedItem.GetType());
+//				Debug.Log("match!");
+//				Debug.Log(selectedItem.GetType());
 				inventory.RemoveItem(selectedItem);
 			}
 
