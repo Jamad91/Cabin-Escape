@@ -12,7 +12,7 @@ public class inventoryStatus : MonoBehaviour {
 	}
 
 	void Start() {
-		Debug.Log("hitting: " + singleInventory);
+//		Debug.Log("hitting: " + singleInventory);
 		if (singleInventory != null) {
 			// Someone ELSE is the singleton already.
 			// So let's just destory ourselves before we cause trouble.
