@@ -86,7 +86,6 @@
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
 -define:CROSS_PLATFORM_INPUT
-'Assets/Persistant.cs'
 'Assets/Scripts/AddItem.cs'
 'Assets/Scripts/GameControl.cs'
 'Assets/Scripts/Interactable.cs'
@@ -94,6 +93,8 @@
 'Assets/Scripts/InventoryManager.cs'
 'Assets/Scripts/Item.cs'
 'Assets/Scripts/LevelManager.cs'
+'Assets/Scripts/Persistant.cs'
+'Assets/Scripts/Saver.cs'
 'Assets/Scripts/SceneController.cs'
 'Assets/Scripts/SelectedItem.cs'
 'Assets/Scripts/inventoryStatus.cs'

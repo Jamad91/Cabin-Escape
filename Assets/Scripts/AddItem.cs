@@ -10,6 +10,6 @@ public class AddItem : MonoBehaviour {
 	void OnMouseDown ()
 	{
 		inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
-		inventory.AddItem(gameObject);
+//		inventory.AddItem(gameObject);
 	}
 }

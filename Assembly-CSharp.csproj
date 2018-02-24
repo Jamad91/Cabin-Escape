@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Persistant.cs" />
+     <Compile Include="Assets\Scripts\Saver.cs" />
      <Compile Include="Assets\Scripts\SceneController.cs" />
      <Compile Include="Assets\Scripts\SelectedItem.cs" />
      <Compile Include="Assets\Scripts\inventoryStatus.cs" />

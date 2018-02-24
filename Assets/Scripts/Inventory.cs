@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour {
 
 	public const int numItemSlots = 6;
-	public GameObject[] items = new GameObject[numItemSlots];
-	private Image itemImage;
-	private Sprite selectedItem;
-	public InventoryManager inventoryManager;
+	public Image[] itemImages = new Image[numItemSlots];
+	public Item[] items = new Item[numItemSlots];
+//	private Image itemImage;
+//	private Sprite selectedItem;
+//	public InventoryManager inventoryManager;
+//	public Saver saver;
 
 //	static Inventory singleInventory;
 //	public static Inventory GetInstance() {
@@ -30,31 +32,96 @@ public class Inventory : MonoBehaviour {
 //
 //	}
 
-	public void AddItem (GameObject itemToAdd)
+	public void AddItem (Item itemToAdd)
 	{
-		for (int i = 0; i < items.Length; i++) {
-			itemImage = items [i].transform.GetChild (0).GetComponent<Image> ();
-			if (itemImage == null || itemImage.sprite == null) {
-				itemImage.sprite = itemToAdd.GetComponent<SpriteRenderer>().sprite;
-				Destroy(itemToAdd);
-				return;
-			}
-		}	
+		for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i] == null)
+            {
+                items[i] = itemToAdd;
+                itemImages[i].sprite = itemToAdd.sprite;
+                itemImages[i].enabled = true;
+                return;
+            }
+        }
+
+//		for (int i = 0; i < items.Length; i++) {
+//			itemImage = items [i].transform.GetChild (0).GetComponent<Image> ();
+//			if (itemImage == null || itemImage.sprite == null) {
+//				itemImage.sprite = itemToAdd.GetComponent<SpriteRenderer>().sprite;
+//				Destroy(itemToAdd);
+//				return;
+//			}
+//		}	
 	}
 
-	public void RemoveItem (Image itemToRemove)
+	public void RemoveItem (Item itemToRemove)
 	{
-		for (int i = 0; i < items.Length; i++) {
-			itemImage = items [i].transform.GetChild (0).GetComponent<Image> ();
-			if (itemImage == itemToRemove) {
-				itemToRemove.transform.localScale -= new Vector3 (0.1F, 0.1F, 0);
-				itemImage.sprite = null;
-				inventoryManager.clearSelectedSlot();
 
+		for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i] == itemToRemove)
+            {
+                items[i] = null;
+                itemImages[i].sprite = null;
+                itemImages[i].enabled = false;
+                return;
+            }
+        }
+//		for (int i = 0; i < items.Length; i++) {
+//			itemImage = items [i].transform.GetChild (0).GetComponent<Image> ();
+//			if (itemImage == itemToRemove) {
+//				itemToRemove.transform.localScale -= new Vector3 (0.1F, 0.1F, 0);
+//				itemImage.sprite = null;
+//				inventoryManager.clearSelectedSlot();
 //				itemImage.transform.localScale -= new Vector3 (0.1F, 0.1F, 0);
-				return;
-			}
-		}
+//				return;
+//			}
+//		}
 	}
 
 }
+
+
+//using UnityEngine;
+//using UnityEngine.UI;
+//
+//public class Inventory : MonoBehaviour
+//{
+//    public Image[] itemImages = new Image[numItemSlots];
+//    public Item[] items = new Item[numItemSlots];
+//
+//
+//    public const int numItemSlots = 4;
+//
+//
+//    public void AddItem(Item itemToAdd)
+//    {
+//        for (int i = 0; i < items.Length; i++)
+//        {
+//            if (items[i] == null)
+//            {
+//                items[i] = itemToAdd;
+//                itemImages[i].sprite = itemToAdd.sprite;
+//                itemImages[i].enabled = true;
+//                return;
+//            }
+//        }
+//    }
+//
+//
+//    public void RemoveItem (Item itemToRemove)
+//    {
+//        for (int i = 0; i < items.Length; i++)
+//        {
+//            if (items[i] == itemToRemove)
+//            {
+//                items[i] = null;
+//                itemImages[i].sprite = null;
+//                itemImages[i].enabled = false;
+//                return;
+//            }
+//        }
+//    }
+//}
+

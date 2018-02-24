@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/Persistant.unity
+- path: Assets/_Scenes/L1/L1_Wall01.unity
   isLoaded: 1
   isActive: 1

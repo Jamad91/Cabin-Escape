@@ -10,8 +10,10 @@ public class LevelManager : MonoBehaviour {
 	{
 		Debug.Log("current scene is " + gameObject.scene.name);
 		Debug.Log("Level Load Requested for: " + name);
+//		Debug.Log("gameobjects:" + gameObject.scene.GetRootGameObjects()[5]);
 		SceneManager.UnloadSceneAsync(gameObject.scene.name);
 		SceneManager.LoadScene(name, LoadSceneMode.Additive);
+
 //		Application.LoadLevel(name);
 //		Application.LoadLevelAdditive(name);
 //		Application.SceneManager.LoadScene(name);
