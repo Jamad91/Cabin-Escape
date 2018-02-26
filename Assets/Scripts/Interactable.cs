@@ -28,8 +28,8 @@ public class Interactable : MonoBehaviour {
 ////
 ////		spriteName = gameObject.GetComponent<SpriteRenderer>();
 //
-		Debug.Log(item.sprite.name);
 		inventory.AddItem(item);
+		Destroy(gameObject);
 	}
 
 }

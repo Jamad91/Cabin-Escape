@@ -36,12 +36,8 @@ public class Inventory : MonoBehaviour {
             if (items[i] == null)
             {
                 items[i] = itemToAdd;
-//				Debug.Log("type: " + itemImages[i].GetType());
-//                Debug.Log("itemToAdd sprite: "+itemToAdd.sprite);
-				Debug.Log("type: " + itemImages[i].GetType());
                 itemImages[i].sprite = itemToAdd.sprite;
-				Debug.Log("itemImages sprite: " + itemImages[i].sprite);
-//                itemImages[i].enabled = true;
+                itemImages[i].enabled = true;
                 return;
             }
 
