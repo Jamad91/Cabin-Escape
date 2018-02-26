@@ -7,7 +7,7 @@ public class Interactable : MonoBehaviour {
 
 //	public Sprite interactsWith;
 //	private SpriteRenderer spriteName;
-//	private Inventory inventory;
+	private Inventory inventory;
 //	public InventoryManager inventoryManager;
 //	public Image selectedItem;
 	public Item item;
@@ -15,7 +15,7 @@ public class Interactable : MonoBehaviour {
 
 	void OnMouseDown ()
 	{
-////		inventory = GameObject.Find ("Inventory").GetComponent<Inventory> ();
+		inventory = GameObject.Find ("Inventory").GetComponent<Inventory> ();
 ////		inventoryManager = GameObject.Find ("InventoryManager").GetComponent<InventoryManager> ();
 ////		selectedItem = inventoryManager.revealSelctedSlot ();
 ////
@@ -29,6 +29,7 @@ public class Interactable : MonoBehaviour {
 ////		spriteName = gameObject.GetComponent<SpriteRenderer>();
 //
 		Debug.Log(item.sprite.name);
+		inventory.AddItem(item);
 	}
 
 }

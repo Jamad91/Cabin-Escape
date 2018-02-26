@@ -90,6 +90,7 @@
 'Assets/Scripts/GameControl.cs'
 'Assets/Scripts/Interactable.cs'
 'Assets/Scripts/Inventory.cs'
+'Assets/Scripts/InventoryEditor.cs'
 'Assets/Scripts/InventoryManager.cs'
 'Assets/Scripts/Item.cs'
 'Assets/Scripts/LevelManager.cs'

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour {
 
 	public const int numItemSlots = 6;
-	public Image[] itemImages = new Image[numItemSlots];
+	public Sprite[] itemImages = new Sprite[numItemSlots];
 	public Item[] items = new Item[numItemSlots];
 //	private Image itemImage;
 //	private Sprite selectedItem;
@@ -34,16 +34,22 @@ public class Inventory : MonoBehaviour {
 
 	public void AddItem (Item itemToAdd)
 	{
+		Debug.Log("adding Item: " + itemToAdd.sprite);
 		for (int i = 0; i < items.Length; i++)
         {
             if (items[i] == null)
             {
                 items[i] = itemToAdd;
-                itemImages[i].sprite = itemToAdd.sprite;
-                itemImages[i].enabled = true;
+                Debug.Log("itemToAdd sprite: "+itemToAdd.sprite);
+				Debug.Log("itemImages sprite: " + itemImages[i]);
+                itemImages[i] = itemToAdd.sprite;
+//                itemImages[i].enabled = true;
                 return;
             }
+
         }
+
+	
 
 //		for (int i = 0; i < items.Length; i++) {
 //			itemImage = items [i].transform.GetChild (0).GetComponent<Image> ();
@@ -63,8 +69,8 @@ public class Inventory : MonoBehaviour {
             if (items[i] == itemToRemove)
             {
                 items[i] = null;
-                itemImages[i].sprite = null;
-                itemImages[i].enabled = false;
+//                itemImages[i].sprite = null;
+//                itemImages[i].enabled = false;
                 return;
             }
         }
