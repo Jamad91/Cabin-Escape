@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class Interactable : MonoBehaviour {
 
-	public Sprite interactsWith;
+//	public Sprite interactsWith;
 //	private SpriteRenderer spriteName;
 //	private Inventory inventory;
-	public InventoryManager inventoryManager;
-	public Image selectedItem;
+//	public InventoryManager inventoryManager;
+//	public Image selectedItem;
+	public Item item;
 
 
 	void OnMouseDown ()
@@ -27,7 +28,7 @@ public class Interactable : MonoBehaviour {
 ////
 ////		spriteName = gameObject.GetComponent<SpriteRenderer>();
 //
-		Debug.Log("item clicked");
+		Debug.Log(item.sprite.name);
 	}
 
 }

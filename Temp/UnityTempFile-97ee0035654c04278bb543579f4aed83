@@ -94,6 +94,8 @@
 'Assets/Scripts/Item.cs'
 'Assets/Scripts/LevelManager.cs'
 'Assets/Scripts/Persistant.cs'
+'Assets/Scripts/PickedUpItemReaction.cs'
+'Assets/Scripts/ReactionCollection.cs'
 'Assets/Scripts/Saver.cs'
 'Assets/Scripts/SceneController.cs'
 'Assets/Scripts/SelectedItem.cs'
