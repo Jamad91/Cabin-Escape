@@ -46,8 +46,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DelayedRaction.cs" />
+     <Compile Include="Assets\EditorWithSubEditors.cs" />
+     <Compile Include="Assets\GameObjectActivitySaver.cs" />
+     <Compile Include="Assets\GameObjectReaction.cs" />
+     <Compile Include="Assets\Reaction.cs" />
+     <Compile Include="Assets\ReactionCollection.cs" />
+     <Compile Include="Assets\ReactionCollectionEditor.cs" />
+     <Compile Include="Assets\ReactionEditors\AnimationReactionEditor.cs" />
+     <Compile Include="Assets\ReactionEditors\AudioReactionEditor.cs" />
+     <Compile Include="Assets\ReactionEditors\BehaviourReactionEditor.cs" />
+     <Compile Include="Assets\ReactionEditors\ConditionReactionEditor.cs" />
+     <Compile Include="Assets\ReactionEditors\GameObjectReactionEditor.cs" />
+     <Compile Include="Assets\ReactionEditors\LostItemReactionEditor.cs" />
+     <Compile Include="Assets\ReactionEditors\PickedUpReactionEditor.cs" />
+     <Compile Include="Assets\ReactionEditors\ReactionEditor.cs" />
+     <Compile Include="Assets\ReactionEditors\SceneReactionEditor.cs" />
+     <Compile Include="Assets\ReactionEditors\TextReactionEditor.cs" />
+     <Compile Include="Assets\SaveDataEditor.cs" />
+     <Compile Include="Assets\SaveObject.cs" />
      <Compile Include="Assets\Scripts\AddItem.cs" />
-     <Compile Include="Assets\Scripts\GameControl.cs" />
      <Compile Include="Assets\Scripts\Interactable.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\InventoryEditor.cs" />
@@ -56,10 +74,13 @@
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Persistant.cs" />
      <Compile Include="Assets\Scripts\PickedUpItemReaction.cs" />
+     <Compile Include="Assets\Scripts\ResettableScriptableObject.cs" />
+     <Compile Include="Assets\Scripts\SaveData.cs" />
      <Compile Include="Assets\Scripts\Saver.cs" />
      <Compile Include="Assets\Scripts\SceneController.cs" />
      <Compile Include="Assets\Scripts\SelectedItem.cs" />
      <Compile Include="Assets\Scripts\inventoryStatus.cs" />
+     <Compile Include="Assets\SerializedPropertyExtensions.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

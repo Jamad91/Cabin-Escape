@@ -16,7 +16,7 @@ public class InventoryManager : MonoBehaviour {
 		inventory = GameObject.Find ("Inventory").GetComponent<Inventory> ();
 
 //		Image itemSlot = itemImage.GetComponent<Image> ();
-		Debug.Log (itemImage.sprite);
+		////////Debug.Log (itemImage.sprite);
 		for (int i = 0; i < inventory.items.Length; i++) {
 			
 //			if (itemSlot.sprite != null && Mathf.Abs(inventory.items [i].GetComponent<Image> ().GetInstanceID () - itemImage.GetInstanceID ()) == Mathf.Abs (2)) {
@@ -44,18 +44,18 @@ public class InventoryManager : MonoBehaviour {
 	}
 
 //	public void RemoveItem (Image itemToRemove) {
-//		Debug.Log("removal of "+  itemToRemove.sprite);
+//		////////Debug.Log("removal of "+  itemToRemove.sprite);
 //		for (int i = 0; i < items.Length; i++) {
 ////			itemImage = items [i].transform.GetChild (0).GetComponent<Image> ();
 ////
 ////			if (itemImage == itemToRemove) {
-////				Debug.Log("time to remove");
+////				////////Debug.Log("time to remove");
 //////				Destroy(itemToRemove);
 ////				itemImage = null;
 //////				items[i] = null;
 ////				return;
 ////			}
 //		}
-////		Debug.Log(items[0]);	
+////		////////Debug.Log(items[0]);	
 //	}
 }

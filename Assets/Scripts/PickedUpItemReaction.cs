@@ -6,7 +6,7 @@ public class PickedUpItemReaction : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log("reaction time");
+		////////Debug.Log("reaction time");
 	}
 	
 	// Update is called once per frame
@@ -15,6 +15,6 @@ public class PickedUpItemReaction : MonoBehaviour {
 	}
 
 	void onMouseDown() {
-		Debug.Log("reaction time2");
+		////////Debug.Log("reaction time2");
 	}
 }

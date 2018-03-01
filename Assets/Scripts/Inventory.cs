@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable] 
+
 public class Inventory : MonoBehaviour {
 
 	public const int numItemSlots = 6;
@@ -15,7 +17,7 @@ public class Inventory : MonoBehaviour {
 //	}
 //
 //	void Start() {
-//		Debug.Log("hitting: " + singleInventory);
+//		////////Debug.Log("hitting: " + singleInventory);
 //		if (singleInventory != null) {
 //			// Someone ELSE is the singleton already.
 //			// So let's just destory ourselves before we cause trouble.
@@ -30,7 +32,7 @@ public class Inventory : MonoBehaviour {
 
 	public void AddItem (Item itemToAdd)
 	{
-		Debug.Log("adding Item: " + itemToAdd.sprite);
+		////////Debug.Log("adding Item: " + itemToAdd.sprite);
 		for (int i = 0; i < items.Length; i++)
         {
             if (items[i] == null)
