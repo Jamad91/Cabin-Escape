@@ -15,13 +15,9 @@ public class Interactable : MonoBehaviour {
 
 	void Start ()
 	{
-//		HingeJoint hinge = GetComponent<HingeJoint>();
-//		GameObject ZD = GameObject.FindGameObjectWithTag ("Zone Manager");
 		GameObject SaveObject = GameObject.FindGameObjectWithTag("SaveObject");
 		saveData = SaveObject.GetComponent<SaveObject>();
 
-
-		Debug.Log("SAVE DATA: "+saveData);
 		if (saveData.state ["shield"] == false) {
 			gameObject.SetActive(false);
 		}
