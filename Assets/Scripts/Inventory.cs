@@ -32,7 +32,7 @@ public class Inventory : MonoBehaviour {
 
 	public void AddItem (Item itemToAdd)
 	{
-		////////Debug.Log("adding Item: " + itemToAdd.sprite);
+		Debug.Log("adding Item: " + itemToAdd.sprite);
 		for (int i = 0; i < items.Length; i++)
         {
             if (items[i] == null)

@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class SaveObject : MonoBehaviour {
 
-	public Dictionary<string, bool> state = new Dictionary<string, bool>();
+	public Dictionary<string, bool> state; //= new Dictionary<string, bool>();
 
 	// Use this for initialization
 	void Awake () {
+
+		state = new Dictionary<string, bool>();
 		
-		state.Add("shield", true);
-		Debug.Log("STATE: "+state["shield"]);
+//		state.Add("Shield1", true);
+//		state.Add("BrownSword", true);
+
 	}
 
 	public void ChangeState(string itemName) {

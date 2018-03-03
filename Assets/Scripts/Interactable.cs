@@ -11,16 +11,24 @@ public class Interactable : MonoBehaviour {
 //	public InventoryManager inventoryManager;
 //	public Image selectedItem;
 	public Item item;
-	public SaveObject saveData;
+	private SaveObject saveData;
 
 	void Start ()
 	{
-		GameObject SaveObject = GameObject.FindGameObjectWithTag("SaveObject");
-		saveData = SaveObject.GetComponent<SaveObject>();
-
-		if (saveData.state ["shield"] == false) {
-			gameObject.SetActive(false);
+		GameObject SaveObject = GameObject.FindGameObjectWithTag ("SaveObject");
+		saveData = SaveObject.GetComponent<SaveObject> ();
+//		Debug.Log(saveData.state.Keys.GetType());
+		foreach (var key in saveData.state.Keys) {
+//			Debug.Log("KEY: "+key+" VAL: "+saveData.state[key]+" GAMEOBJECT: "+gameObject);
+			if (saveData.state [key] == false && key == item.name) {
+				Debug.Log("GOPHER: "+ key);
+				Debug.Log("OWL: " + item);
+				gameObject.SetActive(false);
+			}
 		}
+//		if (saveData.state [key] == false) {
+//			gameObject.SetActive(false);
+//		}
 
 	}
 
@@ -39,11 +47,19 @@ public class Interactable : MonoBehaviour {
 ////		}
 ////
 ////		spriteName = gameObject.GetComponent<SpriteRenderer>();
-//
+//		Debug.Log("hitting this shit", item);
 		inventory.AddItem(item);
 //		Destroy(gameObject);
+
+
 		gameObject.SetActive(false);
-		saveData.ChangeState("shield");
+
+		//THIS IS THE PROBLEM
+//		**********************
+		Debug.Log("GAMEOBJECT: " +gameObject+ " ITEM: "+ item.name);
+		saveData.ChangeState(item.name);
+//		**********************
+
 	}
 
 }
