@@ -66,13 +66,14 @@
      <Compile Include="Assets\SaveDataEditor.cs" />
      <Compile Include="Assets\SaveObject.cs" />
      <Compile Include="Assets\Scripts\AddItem.cs" />
-     <Compile Include="Assets\Scripts\Interactable.cs" />
+     <Compile Include="Assets\Scripts\EnvironmentItem.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\InventoryEditor.cs" />
      <Compile Include="Assets\Scripts\InventoryManager.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Persistant.cs" />
+     <Compile Include="Assets\Scripts\PickUpItem.cs" />
      <Compile Include="Assets\Scripts\PickedUpItemReaction.cs" />
      <Compile Include="Assets\Scripts\ResettableScriptableObject.cs" />
      <Compile Include="Assets\Scripts\SaveData.cs" />

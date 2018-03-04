@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Interactable : MonoBehaviour {
+public class PickUpItem : MonoBehaviour {
 
 //	public Sprite interactsWith;
 //	private SpriteRenderer spriteName;

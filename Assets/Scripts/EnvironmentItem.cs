@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class Item : ScriptableObject {
+public class EnvironmentItem : ScriptableObject {
 	public Sprite sprite;
-	public string combinesWith;
 }
