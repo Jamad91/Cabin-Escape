@@ -10,25 +10,8 @@ public class Inventory : MonoBehaviour {
 	public const int numItemSlots = 6;
 	public Image[] itemImages = new Image[numItemSlots];
 	public Item[] items = new Item[numItemSlots];
+	public SlotSelection slotSelection;
 
-//	static Inventory singleInventory;
-//	public static Inventory GetInstance() {
-//		return singleInventory;
-//	}
-//
-//	void Start() {
-//		////////Debug.Log("hitting: " + singleInventory);
-//		if (singleInventory != null) {
-//			// Someone ELSE is the singleton already.
-//			// So let's just destory ourselves before we cause trouble.
-//			Destroy(this.gameObject);
-//			return;
-//		}
-//		// If we get here, then we are "the one".
-//		singleInventory = this;
-//		GameObject.DontDestroyOnLoad(this.gameObject); //Become immortal
-//
-//	}
 
 	public void AddItem (Item itemToAdd)
 	{
@@ -59,14 +42,15 @@ public class Inventory : MonoBehaviour {
 
 	public void RemoveItem (Item itemToRemove)
 	{
-
+		slotSelection = GameObject.Find ("SlotSelection").GetComponent<SlotSelection> ();
 		for (int i = 0; i < items.Length; i++)
         {
             if (items[i] == itemToRemove)
             {
                 items[i] = null;
-//                itemImages[i].sprite = null;
+                itemImages[i].sprite = null;
 //                itemImages[i].enabled = false;
+				slotSelection.clearSelectedSlot();
                 return;
             }
         }
