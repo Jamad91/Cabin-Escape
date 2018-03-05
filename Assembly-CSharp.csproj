@@ -64,12 +64,11 @@
      <Compile Include="Assets\ReactionEditors\SceneReactionEditor.cs" />
      <Compile Include="Assets\ReactionEditors\TextReactionEditor.cs" />
      <Compile Include="Assets\SaveDataEditor.cs" />
-     <Compile Include="Assets\SaveObject.cs" />
      <Compile Include="Assets\Scripts\AddItem.cs" />
+     <Compile Include="Assets\Scripts\EnvironmentInteractable.cs" />
      <Compile Include="Assets\Scripts\EnvironmentItem.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\InventoryEditor.cs" />
-     <Compile Include="Assets\Scripts\InventoryManager.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Persistant.cs" />
@@ -77,9 +76,11 @@
      <Compile Include="Assets\Scripts\PickedUpItemReaction.cs" />
      <Compile Include="Assets\Scripts\ResettableScriptableObject.cs" />
      <Compile Include="Assets\Scripts\SaveData.cs" />
+     <Compile Include="Assets\Scripts\SaveObject.cs" />
      <Compile Include="Assets\Scripts\Saver.cs" />
      <Compile Include="Assets\Scripts\SceneController.cs" />
      <Compile Include="Assets\Scripts\SelectedItem.cs" />
+     <Compile Include="Assets\Scripts\SlotSelection.cs" />
      <Compile Include="Assets\Scripts\inventoryStatus.cs" />
      <Compile Include="Assets\SerializedPropertyExtensions.cs" />
  <Reference Include="UnityEngine.Analytics">

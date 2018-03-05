@@ -75,7 +75,7 @@ public class Inventory : MonoBehaviour {
 //			if (itemImage == itemToRemove) {
 //				itemToRemove.transform.localScale -= new Vector3 (0.1F, 0.1F, 0);
 //				itemImage.sprite = null;
-//				inventoryManager.clearSelectedSlot();
+//				slotSelction.clearSelectedSlot();
 //				itemImage.transform.localScale -= new Vector3 (0.1F, 0.1F, 0);
 //				return;
 //			}

@@ -8,7 +8,7 @@ public class PickUpItem : MonoBehaviour {
 //	public Sprite interactsWith;
 //	private SpriteRenderer spriteName;
 	private Inventory inventory;
-//	public InventoryManager inventoryManager;
+//	public SlotSelection slotSelection;
 //	public Image selectedItem;
 	public Item item;
 	private SaveObject saveData;
@@ -36,8 +36,8 @@ public class PickUpItem : MonoBehaviour {
 	{
 		Debug.Log("SAVE DATA: "+saveData);
 		inventory = GameObject.Find ("Inventory").GetComponent<Inventory> ();
-////		inventoryManager = GameObject.Find ("InventoryManager").GetComponent<InventoryManager> ();
-////		selectedItem = inventoryManager.revealSelctedSlot ();
+////		slotSelection = GameObject.Find ("SlotSelection").GetComponent<SlotSelection> ();
+////		selectedItem = slotSelection.revealSelctedSlot ();
 ////
 ////		if (selectedItem != null && selectedItem.sprite != null) {
 ////			if (selectedItem.sprite == interactsWith) {
@@ -54,11 +54,7 @@ public class PickUpItem : MonoBehaviour {
 
 		gameObject.SetActive(false);
 
-		//THIS IS THE PROBLEM
-//		**********************
-		Debug.Log("GAMEOBJECT: " +gameObject+ " ITEM: "+ item.name);
 		saveData.ChangeState(item.name);
-//		**********************
 
 	}
 
