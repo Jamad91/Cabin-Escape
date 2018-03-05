@@ -8,7 +8,6 @@ public class SlotSelection : MonoBehaviour {
 
 	private static Inventory inventory;
 	public static Image selectedSlot;
-	//public Image itemSlot;
 	public Transform inventoryItems;
 
 	public void SelectItem (Image itemImage)
@@ -25,9 +24,7 @@ public class SlotSelection : MonoBehaviour {
 					selectedSlot = null;
 				}
 			}
-
 		}
-
 	}
 
 	public Image revealSelctedSlot ()
@@ -35,24 +32,8 @@ public class SlotSelection : MonoBehaviour {
 		return selectedSlot;
 	}
 
-	public void clearSelectedSlot ()
-	{
+	public void resetSelectedSlot() {
+		selectedSlot.transform.localScale -= new Vector3 (0.1F, 0.1F, 0);
 		selectedSlot = null;
 	}
-
-//	public void RemoveItem (Image itemToRemove) {
-//		////////Debug.Log("removal of "+  itemToRemove.sprite);
-//		for (int i = 0; i < items.Length; i++) {
-////			itemImage = items [i].transform.GetChild (0).GetComponent<Image> ();
-////
-////			if (itemImage == itemToRemove) {
-////				////////Debug.Log("time to remove");
-//////				Destroy(itemToRemove);
-////				itemImage = null;
-//////				items[i] = null;
-////				return;
-////			}
-//		}
-////		////////Debug.Log(items[0]);	
-//	}
 }
