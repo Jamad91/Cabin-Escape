@@ -8,7 +8,6 @@ public class SlotSelection : MonoBehaviour {
 
 	private static Inventory inventory;
 	public static Image selectedSlot;
-	public Transform inventoryItems;
 
 	public void SelectItem (Image itemImage)
 	{
@@ -18,11 +17,13 @@ public class SlotSelection : MonoBehaviour {
 			if (inventory.items [i] != null) {
 				if (selectedSlot == null) {
 					selectedSlot = itemImage;
-					selectedSlot.transform.localScale += new Vector3 (0.1F, 0.1F, 0);
+					selectedSlot.transform.localScale += new Vector3 (0.2F, 0.2F, 0);
 				} else if (selectedSlot == itemImage) {
-					selectedSlot.transform.localScale -= new Vector3 (0.1F, 0.1F, 0);
+					selectedSlot.transform.localScale -= new Vector3 (0.2F, 0.2F, 0);
 					selectedSlot = null;
+
 				}
+				return;
 			}
 		}
 	}
@@ -33,7 +34,7 @@ public class SlotSelection : MonoBehaviour {
 	}
 
 	public void resetSelectedSlot() {
-		selectedSlot.transform.localScale -= new Vector3 (0.1F, 0.1F, 0);
+		selectedSlot.transform.localScale -= new Vector3 (0.2F, 0.2F, 0);
 		selectedSlot = null;
 	}
 }
