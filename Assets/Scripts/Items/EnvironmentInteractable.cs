@@ -7,7 +7,7 @@ public class EnvironmentInteractable : MonoBehaviour {
 	public EnvironmentItem environmentItem;
 	private SlotSelection slotSelection;
 	private Inventory inventory;
-	public Item item;
+	private Item item;
 
 	void Start() {
 		slotSelection = GameObject.Find ("SlotSelection").GetComponent<SlotSelection> ();
@@ -17,7 +17,12 @@ public class EnvironmentInteractable : MonoBehaviour {
 	void OnMouseDown ()
 	{
 		for (int i = 0; i < inventory.itemImages.Length; i++) {
-			if (inventory.itemImages[i].sprite.name == slotSelection.revealSelctedSlot().sprite.name) {
+			Debug.Log("ITEM IMAGES SPRITE: "+inventory.itemImages[i].sprite.name);
+			Debug.Log("SELECTED SLOT SPRITE: "+slotSelection.revealSelctedSlot().sprite.name);
+			Debug.Log(environmentItem.combinesWith);
+			Debug.Log("TRUE OR FALSE? "+inventory.itemImages[i].sprite.name.ToString() == slotSelection.revealSelctedSlot().sprite.name.ToString());
+			if (inventory.itemImages[i].sprite.name == slotSelection.revealSelctedSlot().sprite.name && environmentItem.combinesWith == slotSelection.revealSelctedSlot().sprite.name) {
+				Debug.Log("hitting");
 				item = inventory.items[i];
 				inventory.RemoveItem(item);
 				slotSelection.resetSelectedSlot();
