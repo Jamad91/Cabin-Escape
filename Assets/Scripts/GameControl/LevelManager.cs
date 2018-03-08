@@ -7,11 +7,22 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour {
 
 	public float autoLoadNextLevel;
+	public string leftRoomName;
+	public string rightRoomName;
 
 	void Start ()
 	{
 		if (SceneManager.GetActiveScene ().name == "Splash") {
 			Invoke("LoadNextLevel", autoLoadNextLevel);
+		}
+	}
+
+	void Update ()
+	{
+		if (Input.GetKeyDown ("right")) {
+			LoadLevel (rightRoomName);
+		} else if (Input.GetKeyDown ("left")) {
+			LoadLevel (leftRoomName);
 		}
 	}
 
