@@ -10,7 +10,6 @@ public class LevelManager : MonoBehaviour {
 
 	void Start ()
 	{
-		Debug.Log (SceneManager.GetActiveScene ().name == "Splash");
 		if (SceneManager.GetActiveScene ().name == "Splash") {
 			Invoke("LoadNextLevel", autoLoadNextLevel);
 		}
@@ -18,7 +17,6 @@ public class LevelManager : MonoBehaviour {
 
 	public void LoadLevel (string name)
 	{
-		Debug.Log (name);
 		if (SceneManager.GetActiveScene ().name == "Start") {
 			SceneManager.LoadScene(name);
 			return;
