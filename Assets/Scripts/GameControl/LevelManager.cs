@@ -19,9 +19,11 @@ public class LevelManager : MonoBehaviour {
 
 	void Update ()
 	{
-		if (Input.GetKeyDown ("right")) {
+		if (Input.GetKeyDown ("right") && rightRoomName.Length > 0) {
+//			Debug.Log(rightRoomName);
 			LoadLevel (rightRoomName);
-		} else if (Input.GetKeyDown ("left")) {
+		} else if (Input.GetKeyDown ("left") && leftRoomName.Length > 0) {
+//			Debug.Log("LEFT: "+leftRoomName);
 			LoadLevel (leftRoomName);
 		}
 	}
