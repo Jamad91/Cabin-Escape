@@ -46,6 +46,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AllConditions.cs" />
+     <Compile Include="Assets\AllConditionsEditor.cs" />
+     <Compile Include="Assets\Condition.cs" />
+     <Compile Include="Assets\ConditionCollection.cs" />
+     <Compile Include="Assets\ConditionCollectionEditor.cs" />
+     <Compile Include="Assets\ConditionEditor.cs" />
+     <Compile Include="Assets\DelayedReaction.cs" />
+     <Compile Include="Assets\EditorWithSubEditor.cs" />
+     <Compile Include="Assets\Reaction.cs" />
+     <Compile Include="Assets\ReactionCollection.cs" />
+     <Compile Include="Assets\ReactionCollectionEditor.cs" />
+     <Compile Include="Assets\ReactionEditor.cs" />
+     <Compile Include="Assets\ResettableScriptableObject.cs" />
      <Compile Include="Assets\Scripts\GameControl\LevelManager.cs" />
      <Compile Include="Assets\Scripts\GameControl\Persistant.cs" />
      <Compile Include="Assets\Scripts\GameControl\SaveObject.cs" />
@@ -58,6 +71,8 @@
      <Compile Include="Assets\Scripts\Items\Item.cs" />
      <Compile Include="Assets\Scripts\Items\PickUpItem.cs" />
      <Compile Include="Assets\Scripts\Items\SelectedItem.cs" />
+     <Compile Include="Assets\SerializedPropertyExtensions.cs" />
+     <Compile Include="Assets\_Scenes\Interactable.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

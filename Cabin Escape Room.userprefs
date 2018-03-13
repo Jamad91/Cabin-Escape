@@ -1,17 +1,22 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ReactionCollectionEditor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AllConditions.cs">
     <Files>
-      <File FileName="Assets/EditorWithSubEditors.cs" Line="44" Column="1" />
-      <File FileName="Assets/ReactionEditors/GameObjectReactionEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PickedUpItemReaction.cs" Line="1" Column="1" />
-      <File FileName="Assets/SaveDataEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets/GameObjectActivitySaver.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ResettableScriptableObject.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Saver.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/InventoryEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SaveData.cs" Line="1" Column="1" />
-      <File FileName="Assets/ReactionCollectionEditor.cs" Line="100" Column="47" />
+      <File FileName="Assets/AllConditions.cs" Line="22" Column="27" />
+      <File FileName="Assets/Scripts/GameControl/LevelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/ConditionCollectionEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets/ConditionCollection.cs" Line="1" Column="1" />
+      <File FileName="Assets/EditorWithSubEditors.cs" Line="1" Column="1" />
+      <File FileName="Assets/ConditionEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets/Condition.cs" Line="1" Column="1" />
+      <File FileName="Assets/ReactionCollectionEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets/ReactionEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets/Reaction.cs" Line="1" Column="1" />
+      <File FileName="Assets/ReactionCollection.cs" Line="1" Column="1" />
+      <File FileName="Assets/ResettableScriptableObject.cs" Line="1" Column="1" />
+      <File FileName="Assets/AllConditionsEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets/DelayedReaction.cs" Line="1" Column="1" />
+      <File FileName="Assets/SerializedPropertyExtensions.cs" Line="65" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
