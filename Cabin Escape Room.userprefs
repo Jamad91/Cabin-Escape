@@ -1,17 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ReactionCollectionEditor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameControl/SaveObject.cs">
     <Files>
-      <File FileName="Assets/EditorWithSubEditors.cs" Line="44" Column="1" />
-      <File FileName="Assets/ReactionEditors/GameObjectReactionEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PickedUpItemReaction.cs" Line="1" Column="1" />
-      <File FileName="Assets/SaveDataEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets/GameObjectActivitySaver.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ResettableScriptableObject.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Saver.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/InventoryEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SaveData.cs" Line="1" Column="1" />
-      <File FileName="Assets/ReactionCollectionEditor.cs" Line="100" Column="47" />
+      <File FileName="Assets/Scripts/GameControl/LevelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameControl/SaveObject.cs" Line="10" Column="42" />
+      <File FileName="Assets/Scripts/Items/Item.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Items/PickUpItem.cs" Line="12" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
