@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Items\Item.cs" />
      <Compile Include="Assets\Scripts\Items\PickUpItem.cs" />
      <Compile Include="Assets\Scripts\Items\SelectedItem.cs" />
+     <Compile Include="Assets\Scripts\Items\Slideables.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
