@@ -56,7 +56,7 @@
      <Compile Include="Assets\Scripts\Items\EnvironmentInteractable.cs" />
      <Compile Include="Assets\Scripts\Items\EnvironmentItem.cs" />
      <Compile Include="Assets\Scripts\Items\Item.cs" />
-     <Compile Include="Assets\Scripts\Items\PickUpItem.cs" />
+     <Compile Include="Assets\Scripts\Items\PickUps.cs" />
      <Compile Include="Assets\Scripts\Items\SelectedItem.cs" />
      <Compile Include="Assets\Scripts\Items\Slideables.cs" />
  <Reference Include="UnityEngine.Analytics">

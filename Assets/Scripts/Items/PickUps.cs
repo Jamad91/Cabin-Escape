@@ -13,6 +13,7 @@ public class PickUps : MonoBehaviour {
 	{
 		GameObject SaveObject = GameObject.FindGameObjectWithTag ("SaveObject");
 		saveObject = SaveObject.GetComponent<SaveObject> ();
+		Debug.Log(item.name);
 		foreach (var key in saveObject.pickups.Keys) {
 			if (saveObject.pickups [key] == false && key == item.name) {
 				gameObject.SetActive(false);
@@ -25,7 +26,7 @@ public class PickUps : MonoBehaviour {
 		inventory = GameObject.Find ("Inventory").GetComponent<Inventory> ();
 		inventory.AddItem(item);
 		gameObject.SetActive(false);
-		saveObject.ChangeState(item.name);
+		saveObject.TogglePickupState(item.name);
 	}
 
 }

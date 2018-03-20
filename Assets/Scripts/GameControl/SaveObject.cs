@@ -50,8 +50,8 @@ public class SaveObject : MonoBehaviour {
 
 	}
 
-	public void ChangeState(string itemName) {
-		pickups[itemName] = false;
+	public void TogglePickupState(string itemName) {
+		pickups[itemName] = !pickups[itemName];
 	}
 
 	public void ToggleCondition (string conditionName)
