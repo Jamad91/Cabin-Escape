@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class SaveObject : MonoBehaviour {
 
-	public Dictionary<string, bool> state;
-	public Dictionary<string, bool> conditions = new Dictionary<string, bool>();
-	public GameObject Gogo;
+	public Dictionary<string, bool> conditions;
+	public Dictionary<string, bool> pickups;
+	public Dictionary<string, Slideables> slideables;
 
 	void Awake () {
-		state = new Dictionary<string, bool>();
+		conditions = new Dictionary<string, bool>();
+		pickups = new Dictionary<string, bool>();
+		slideables = new Dictionary<string, Slideables>();
 
 		conditions["haveKettle"] = false;
 		conditions["haveFullBaloon"] = false;
@@ -49,7 +51,7 @@ public class SaveObject : MonoBehaviour {
 	}
 
 	public void ChangeState(string itemName) {
-		state[itemName] = false;
+		pickups[itemName] = false;
 	}
 
 	public void ToggleCondition (string conditionName)
