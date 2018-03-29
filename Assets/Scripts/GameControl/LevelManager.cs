@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour {
 	public float autoLoadNextLevel;
 	public string leftRoomName;
 	public string rightRoomName;
+	public string currentScene;
 
 	void Start ()
 	{
@@ -28,10 +29,20 @@ public class LevelManager : MonoBehaviour {
 
 	public void LoadLevel (string name)
 	{
-		if (SceneManager.GetActiveScene ().name == "Start") {
-			SceneManager.LoadScene(name);
+		if (SceneManager.GetActiveScene ().name == "Start" && name != "Settings") {
+			SceneManager.LoadScene (name);
 			return;
+//		} else if (SceneManager.GetActiveScene ().name != "Start" && name == "Settings") {
+//			SceneManager.UnloadSceneAsync(gameObject.scene.name);
+//			SceneManager.LoadScene(name, LoadSceneMode.Additive);
+//			Debug.Log("Hit menu: " + name);
+//			Debug.Log("Hitting this: " + gameObject.scene.name);
+//			Debug.Log("Hitting That: "+ currentScene);
+//			SceneManager.UnloadSceneAsync(gameObject.scene.name);
+//			SceneManager.LoadScene(name, LoadSceneMode.Additive);
+//			return;
 		}
+		Debug.Log("moving: "+gameObject.scene.name);
 		SceneManager.UnloadSceneAsync(gameObject.scene.name);
 		SceneManager.LoadScene(name, LoadSceneMode.Additive);
 	}

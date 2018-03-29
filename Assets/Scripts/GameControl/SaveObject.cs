@@ -46,7 +46,7 @@ public class SaveObject : MonoBehaviour {
 		conditions["slit3Placed"] = false;
 		conditions["stripCompleted"] = false;
 
-
+//		pickups["BrownShield"] = true;
 
 	}
 
