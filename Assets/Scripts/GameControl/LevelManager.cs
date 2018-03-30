@@ -16,6 +16,7 @@ public class LevelManager : MonoBehaviour {
 		if (SceneManager.GetActiveScene ().name == "Splash") {
 			Invoke("LoadNextLevel", autoLoadNextLevel);
 		}
+
 	}
 
 	void Update ()
@@ -25,6 +26,11 @@ public class LevelManager : MonoBehaviour {
 		} else if (Input.GetKeyDown ("left") && leftRoomName.Length > 0) {
 			LoadLevel (leftRoomName);
 		}
+	}
+
+	public string getPreviousScene ()
+	{
+		return gameObject.scene.name;
 	}
 
 	public void LoadLevel (string name)
@@ -42,9 +48,13 @@ public class LevelManager : MonoBehaviour {
 //			SceneManager.LoadScene(name, LoadSceneMode.Additive);
 //			return;
 		}
-		Debug.Log("moving: "+gameObject.scene.name);
-		SceneManager.UnloadSceneAsync(gameObject.scene.name);
-		SceneManager.LoadScene(name, LoadSceneMode.Additive);
+		Debug.Log ("To: " + name);
+		Debug.Log ("From: " + gameObject.scene.name);
+		SceneManager.UnloadSceneAsync (gameObject.scene.name);
+		SceneManager.LoadScene (name, LoadSceneMode.Additive);
+		if (name == "Settings") {
+			getPreviousScene();
+		}
 	}
 
 	public void QuitGame ()
