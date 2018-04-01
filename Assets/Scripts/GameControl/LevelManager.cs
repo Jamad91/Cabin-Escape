@@ -43,10 +43,10 @@ public class LevelManager : MonoBehaviour {
 			SceneManager.LoadScene (name);
 			return;
 		} else if (SceneManager.GetActiveScene ().name == "Start" && name == "Settings") {
-//			saveObject.previousScene = gameObject.scene.name;
 			SceneManager.LoadScene (name);
 			return;
 		} else if (SceneManager.GetActiveScene ().name == "Settings" && name.Length == 0) {
+			Debug.Log("hitting this shit");
 			SceneManager.LoadScene ("Start");
 			return;
 		}
