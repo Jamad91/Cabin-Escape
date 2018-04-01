@@ -42,15 +42,13 @@ public class LevelManager : MonoBehaviour {
 		if (SceneManager.GetActiveScene ().name == "Start" && name != "Settings") {
 			SceneManager.LoadScene (name);
 			return;
-//		} else if (SceneManager.GetActiveScene ().name != "Start" && name == "Settings") {
-//			SceneManager.UnloadSceneAsync(gameObject.scene.name);
-//			SceneManager.LoadScene(name, LoadSceneMode.Additive);
-//			Debug.Log("Hit menu: " + name);
-//			Debug.Log("Hitting this: " + gameObject.scene.name);
-//			Debug.Log("Hitting That: "+ currentScene);
-//			SceneManager.UnloadSceneAsync(gameObject.scene.name);
-//			SceneManager.LoadScene(name, LoadSceneMode.Additive);
-//			return;
+		} else if (SceneManager.GetActiveScene ().name == "Start" && name == "Settings") {
+//			saveObject.previousScene = gameObject.scene.name;
+			SceneManager.LoadScene (name);
+			return;
+		} else if (SceneManager.GetActiveScene ().name == "Settings" && name.Length == 0) {
+			SceneManager.LoadScene ("Start");
+			return;
 		}
 		Debug.Log ("To: " + name);
 		Debug.Log ("From: " + gameObject.scene.name);
