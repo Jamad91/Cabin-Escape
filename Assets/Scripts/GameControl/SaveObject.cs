@@ -7,11 +7,13 @@ public class SaveObject : MonoBehaviour {
 	public Dictionary<string, bool> conditions;
 	public Dictionary<string, bool> pickups;
 	public Dictionary<string, Slideables> slideables;
+	public string previousScene;
 
 	void Awake () {
 		conditions = new Dictionary<string, bool>();
 		pickups = new Dictionary<string, bool>();
 		slideables = new Dictionary<string, Slideables>();
+		previousScene = "Start";
 
 		conditions["haveKettle"] = false;
 		conditions["haveFullBaloon"] = false;

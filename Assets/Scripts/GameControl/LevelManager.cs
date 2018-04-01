@@ -10,9 +10,12 @@ public class LevelManager : MonoBehaviour {
 	public string leftRoomName;
 	public string rightRoomName;
 	public string currentScene;
+	private SaveObject saveObject;
 
 	void Start ()
 	{
+		GameObject SaveObject = GameObject.FindGameObjectWithTag ("SaveObject");
+		saveObject = SaveObject.GetComponent<SaveObject> ();
 		if (SceneManager.GetActiveScene ().name == "Splash") {
 			Invoke("LoadNextLevel", autoLoadNextLevel);
 		}
@@ -30,7 +33,8 @@ public class LevelManager : MonoBehaviour {
 
 	public string getPreviousScene ()
 	{
-		return gameObject.scene.name;
+		Debug.Log("shitty: "+gameObject.scene.name);
+		return currentScene;
 	}
 
 	public void LoadLevel (string name)
@@ -50,11 +54,14 @@ public class LevelManager : MonoBehaviour {
 		}
 		Debug.Log ("To: " + name);
 		Debug.Log ("From: " + gameObject.scene.name);
+		if (gameObject.scene.name == "Settings") {
+			name = saveObject.previousScene;
+		}
+		saveObject.previousScene = gameObject.scene.name;
+		Debug.Log("previous scene is: " + saveObject.previousScene);
 		SceneManager.UnloadSceneAsync (gameObject.scene.name);
 		SceneManager.LoadScene (name, LoadSceneMode.Additive);
-		if (name == "Settings") {
-			getPreviousScene();
-		}
+
 	}
 
 	public void QuitGame ()
