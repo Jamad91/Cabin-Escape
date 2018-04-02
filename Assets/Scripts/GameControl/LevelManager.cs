@@ -31,12 +31,6 @@ public class LevelManager : MonoBehaviour {
 		}
 	}
 
-	public string getPreviousScene ()
-	{
-		Debug.Log("shitty: "+gameObject.scene.name);
-		return currentScene;
-	}
-
 	public void LoadLevel (string name)
 	{
 		if (SceneManager.GetActiveScene ().name == "Start" && name != "Settings") {
@@ -46,17 +40,13 @@ public class LevelManager : MonoBehaviour {
 			SceneManager.LoadScene (name);
 			return;
 		} else if (SceneManager.GetActiveScene ().name == "Settings" && name.Length == 0) {
-			Debug.Log("hitting this shit");
 			SceneManager.LoadScene ("Start");
 			return;
 		}
-		Debug.Log ("To: " + name);
-		Debug.Log ("From: " + gameObject.scene.name);
 		if (gameObject.scene.name == "Settings") {
 			name = saveObject.previousScene;
 		}
 		saveObject.previousScene = gameObject.scene.name;
-		Debug.Log("previous scene is: " + saveObject.previousScene);
 		SceneManager.UnloadSceneAsync (gameObject.scene.name);
 		SceneManager.LoadScene (name, LoadSceneMode.Additive);
 
