@@ -19,6 +19,7 @@ public class LevelManager : MonoBehaviour {
 		saveObject = SaveObject.GetComponent<SaveObject> ();
 
 		GameObject Inventory = GameObject.FindGameObjectWithTag("Inventory");
+		Debug.Log("THIS SHIT: " + Inventory);
 		inventory = Inventory.GetComponent<Inventory>();
 
 		if (SceneManager.GetActiveScene ().name == "Splash") {
@@ -58,6 +59,7 @@ public class LevelManager : MonoBehaviour {
 
 		if (name == "Settings") {
 			inventory.SetActive(false);
+//			inventory.transform.parent.gameObject.SetActive(false);
 		}
 
 	}

@@ -11,12 +11,11 @@ public class Inventory : MonoBehaviour {
 	public Image[] itemImages = new Image[numItemSlots];
 	public Item[] items = new Item[numItemSlots];
 
-	public void Start ()
-	{
-		Debug.Log("THIS: "+this.transform.parent.gameObject);
-		this.transform.parent.gameObject.SetActive(false);
-//		this.transform.gameObject.SetActive(false);
-	}
+//	public void Start ()
+//	{
+//		Debug.Log("THIS: "+this.transform.parent.gameObject);
+////		this.transform.parent.gameObject.SetActive(false);
+//	}
 
 	public void AddItem (Item itemToAdd)
 	{
@@ -47,7 +46,7 @@ public class Inventory : MonoBehaviour {
 
 	public void SetActive (bool active)
 	{
-		gameObject.SetActive(active);
+		this.transform.parent.gameObject.SetActive(active);
 	}
 
 }
