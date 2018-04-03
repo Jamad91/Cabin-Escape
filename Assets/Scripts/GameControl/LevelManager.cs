@@ -11,11 +11,16 @@ public class LevelManager : MonoBehaviour {
 	public string rightRoomName;
 	public string currentScene;
 	private SaveObject saveObject;
+	public Inventory inventory;
 
 	void Start ()
 	{
 		GameObject SaveObject = GameObject.FindGameObjectWithTag ("SaveObject");
 		saveObject = SaveObject.GetComponent<SaveObject> ();
+
+		GameObject Inventory = GameObject.FindGameObjectWithTag("Inventory");
+		inventory = Inventory.GetComponent<Inventory>();
+
 		if (SceneManager.GetActiveScene ().name == "Splash") {
 			Invoke("LoadNextLevel", autoLoadNextLevel);
 		}
@@ -46,9 +51,14 @@ public class LevelManager : MonoBehaviour {
 		if (gameObject.scene.name == "Settings") {
 			name = saveObject.previousScene;
 		}
+
 		saveObject.previousScene = gameObject.scene.name;
 		SceneManager.UnloadSceneAsync (gameObject.scene.name);
 		SceneManager.LoadScene (name, LoadSceneMode.Additive);
+
+		if (name == "Settings") {
+			inventory.SetActive(false);
+		}
 
 	}
 

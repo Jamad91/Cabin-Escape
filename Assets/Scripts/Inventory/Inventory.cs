@@ -11,6 +11,13 @@ public class Inventory : MonoBehaviour {
 	public Image[] itemImages = new Image[numItemSlots];
 	public Item[] items = new Item[numItemSlots];
 
+	public void Start ()
+	{
+		Debug.Log("THIS: "+this.transform.parent.gameObject);
+		this.transform.parent.gameObject.SetActive(false);
+//		this.transform.gameObject.SetActive(false);
+	}
+
 	public void AddItem (Item itemToAdd)
 	{
 		for (int i = 0; i < items.Length; i++)
@@ -36,6 +43,11 @@ public class Inventory : MonoBehaviour {
                 return;
             }
         }
+	}
+
+	public void SetActive (bool active)
+	{
+		gameObject.SetActive(active);
 	}
 
 }
